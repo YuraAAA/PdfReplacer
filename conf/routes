@@ -1,0 +1,18 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Map static resources from the /public folder to the /assets URL path
+GET         /versionedAssets/*file                         controllers.Assets.versioned(file)
+
+GET         /public/javascripts/jquery-1.9.0.min.js        controllers.Assets.at(path="/public/javascripts", file="jquery-1.9.0.min.js")
+
+GET         /public/stylesheets/bootstrap.css              controllers.Assets.at(path="/public/stylesheets", file="bootstrap.css")
+
+GET         /                                              controllers.PdfController.index()
+
+
+POST        /                                              controllers.PdfController.parse()
+
+#GET         /                                              controllers.Assets.at(path="/public/html", file="index.html")
+
